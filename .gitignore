@@ -1,6 +1,6 @@
-airflow_and_db/config
-airflow_and_db/logs
-airflow_and_db/plugins
+task_3/airflow_and_db/config
+task_3/airflow_and_db/logs
+task_3/airflow_and_db/plugins
 
 __pycache__
 .idea
