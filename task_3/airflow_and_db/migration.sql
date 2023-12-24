@@ -13,5 +13,6 @@ create schema sandbox;
 create table sandbox.exchange_rate(
 exchange_dt timestamptz not null,
 currency_pair varchar(6) not null,
-rate numeric not null
+rate numeric not null,
+created_at timestamptz default now()
 );

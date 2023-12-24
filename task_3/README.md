@@ -8,7 +8,7 @@
 
 1) Склонировать проект на локальный компьютер и перейти в каталог
 ```
-git clone https://github.com/tirdman/ya_practicum.git && cd ya_practicum
+git clone https://github.com/tirdman/ya_practicum.git && cd ya_practicum/task_3
 ```
 
 2) Создать сервис
@@ -43,4 +43,8 @@ docker-compose up -d
 docker exec -u postgres airflow_and_db-db-dwh-1 psql -U postgres -f /migration.sql
 ```
 
+Заполнение истории
+```
+docker exec airflow_and_db-airflow-worker-1 airflow dags backfill currency_service_daily_1 -s 2023-12-20 -e 2023-12-23
+```
 
