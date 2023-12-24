@@ -44,7 +44,6 @@ def get_currency(params: ApiRequestParam) -> CurrencyInfo:
                                      currency_pair=params.currency_pair,
                                      currency_date=params.exchange_dt
                                      )
-    print(f"Request uri: {uri}")
 
     with urlopen(uri) as response:
         _data = json.load(response)
