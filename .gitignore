@@ -1,0 +1,5 @@
+airflow_and_db/config
+airflow_and_db/logs
+airflow_and_db/plugins
+
+.idea
