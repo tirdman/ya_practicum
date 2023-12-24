@@ -6,7 +6,7 @@ from airflow import DAG
 with DAG(
     dag_id="currency_service",
     schedule="0 */3 * * *",
-    start_date=pendulum.datetime(2023, 12, 23, tz="UTC"),
+    start_date=pendulum.datetime(2023, 12, 24, tz="UTC"),
     catchup=False,
 ) as dag:
 
