@@ -12,9 +12,6 @@ API_HISTORY_URL = 'http://api.exchangerate.host/historical?access_key={access_ke
 CURRENCY_PAIR = os.getenv('CURRENCY_PAIR')
 CURRENCY_DATE = os.getenv('CURRENCY_DATE')
 
-# CURRENCY_PAIR = os.getenv('USD,RUB')
-# CURRENCY_DATE = '2023-12-01 00:00:00'
-
 PG_HOST = os.getenv('PG_HOST')
 PG_USER = os.getenv('PG_USER')
 PG_PASSWORD = os.getenv('PG_PASSWORD')
@@ -51,8 +48,6 @@ def get_currency(params: ApiRequestParam) -> CurrencyInfo:
 
     with urlopen(uri) as response:
         _data = json.load(response)
-
-        print(_data)
 
         return CurrencyInfo(
             exchange_dt=datetime.utcfromtimestamp(_data["timestamp"]),
